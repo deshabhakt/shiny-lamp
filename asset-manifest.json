@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/shiny-lamp/static/css/main.fe09d3b3.css",
-    "main.js": "/shiny-lamp/static/js/main.43177fd8.js",
+    "main.js": "/shiny-lamp/static/js/main.7b72f7b1.js",
     "index.html": "/shiny-lamp/index.html",
     "main.fe09d3b3.css.map": "/shiny-lamp/static/css/main.fe09d3b3.css.map",
-    "main.43177fd8.js.map": "/shiny-lamp/static/js/main.43177fd8.js.map"
+    "main.7b72f7b1.js.map": "/shiny-lamp/static/js/main.7b72f7b1.js.map"
   },
   "entrypoints": [
     "static/css/main.fe09d3b3.css",
-    "static/js/main.43177fd8.js"
+    "static/js/main.7b72f7b1.js"
   ]
 }
