@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import TitleBar from "./components/title_bar/TitleBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -46,19 +46,20 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
   },
 }));
-
+export const routePrefix = "/shiny-lamp";
 function App() {
   const styles = useStyles();
   const [isSignedIn, setIsSignedIn] = useState(false);
   const signInHandler = (flag) => {
     setIsSignedIn(flag);
   };
+
   return (
     <Router>
       <div className={styles.app}>
         <Routes>
           <Route
-            path="/"
+            path={routePrefix + "/"}
             element={!isSignedIn && <SignIn signInHandler={signInHandler} />}
           />
         </Routes>
@@ -72,59 +73,59 @@ function App() {
               <div className={styles.pageContainer}>
                 <Routes>
                   <Route
-                    path="/"
+                    path={routePrefix + "/"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/dashboard"
+                    path={routePrefix + "/dashboard"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/cases"
+                    path={routePrefix + "/cases"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/documents"
+                    path={routePrefix + "/documents"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/mods"
+                    path={routePrefix + "/mods"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/title-search-reports"
+                    path={routePrefix + "/title-search-reports"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/vetting-reports"
+                    path={routePrefix + "/vetting-reports"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/cheques"
+                    path={routePrefix + "/cheques"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/banks"
+                    path={routePrefix + "/banks"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/societies"
+                    path={routePrefix + "/societies"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/templates"
+                    path={routePrefix + "/templates"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/users"
+                    path={routePrefix + "/users"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/roles"
+                    path={routePrefix + "/roles"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                   <Route
-                    path="/statuses"
+                    path={routePrefix + "/statuses"}
                     element={<Dashboard isSignedIn={isSignedIn} />}
                   />
                 </Routes>

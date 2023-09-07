@@ -18,6 +18,7 @@ import ReceiptIcon from "@mui/icons-material/Receipt";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { routePrefix } from "../../App";
 
 const useStyles = makeStyles((theme) => ({
   optionList: {
@@ -43,27 +44,51 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const options = [
-  { text: "Dashboard", icon: <DashboardIcon />, route: "/" },
-  { text: "Cases", icon: <AssignmentIcon />, route: "/cases" },
-  { text: "Documents", icon: <DescriptionIcon />, route: "/documents" },
-  { text: "MODs", icon: <ExtensionIcon />, route: "/mods" },
+  { text: "Dashboard", icon: <DashboardIcon />, route: `${routePrefix}/` },
+  { text: "Cases", icon: <AssignmentIcon />, route: `${routePrefix}/cases` },
+  {
+    text: "Documents",
+    icon: <DescriptionIcon />,
+    route: `${routePrefix}/documents`,
+  },
+  { text: "MODs", icon: <ExtensionIcon />, route: `${routePrefix}/mods` },
   {
     text: "Title Search Reports",
     icon: <ListAltIcon />,
-    route: "/title-search-reports",
+    route: `${routePrefix}/title-search-reports`,
   },
   {
     text: "Vetting Reports",
     icon: <AssessmentIcon />,
-    route: "/vetting-reports",
+    route: `${routePrefix}/vetting-reports`,
   },
-  { text: "Cheques", icon: <PaymentIcon />, route: "/cheques" },
-  { text: "Banks", icon: <AccountBalanceIcon />, route: "/banks" },
-  { text: "Societies", icon: <PeopleIcon />, route: "/societies" },
-  { text: "Templates", icon: <ReceiptIcon />, route: "/templates" },
-  { text: "Users", icon: <AccountCircleIcon />, route: "/users" },
-  { text: "Roles", icon: <SupervisorAccountIcon />, route: "/roles" },
-  { text: "Statuses", icon: <CheckCircleIcon />, route: "/statuses" },
+  { text: "Cheques", icon: <PaymentIcon />, route: `${routePrefix}/cheques` },
+  {
+    text: "Banks",
+    icon: <AccountBalanceIcon />,
+    route: `${routePrefix}/banks`,
+  },
+  {
+    text: "Societies",
+    icon: <PeopleIcon />,
+    route: `${routePrefix}/societies`,
+  },
+  {
+    text: "Templates",
+    icon: <ReceiptIcon />,
+    route: `${routePrefix}/templates`,
+  },
+  { text: "Users", icon: <AccountCircleIcon />, route: `${routePrefix}/users` },
+  {
+    text: "Roles",
+    icon: <SupervisorAccountIcon />,
+    route: `${routePrefix}/roles`,
+  },
+  {
+    text: "Statuses",
+    icon: <CheckCircleIcon />,
+    route: `${routePrefix}/statuses`,
+  },
 ];
 
 const OptionsList = () => {

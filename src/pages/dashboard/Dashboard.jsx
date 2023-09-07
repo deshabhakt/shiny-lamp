@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { makeStyles } from "@mui/styles";
 import { useNavigate } from "react-router-dom";
+import { routePrefix } from "../../App";
 
 const useStyles = makeStyles((theme) => ({
   panelBody: {
@@ -65,7 +66,7 @@ const Dashboard = ({ isSignedIn }) => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isSignedIn) {
-      navigate("/");
+      navigate(`${routePrefix}/`);
     }
   });
   return (
