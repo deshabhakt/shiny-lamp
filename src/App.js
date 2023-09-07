@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import TitleBar from "./components/title_bar/TitleBar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 
 // TODO: add all templates

@@ -43,7 +43,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const options = [
-  { text: "Dashboard", icon: <DashboardIcon />, route: `${routePrefix}/` },
+  {
+    text: "Dashboard",
+    icon: <DashboardIcon />,
+    route: `${routePrefix}/dashboard`,
+  },
   { text: "Cases", icon: <AssignmentIcon />, route: `${routePrefix}/cases` },
   {
     text: "Documents",

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -29,11 +30,11 @@ const SignIn = ({ signInHandler }) => {
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     signInHandler(true);
-    // navigate("/dashboard");
+    navigate("/shiny-lamp/dashboard");
   };
 
   return (
