@@ -65,7 +65,7 @@ const TitleBar = ({ isSignedIn, signInHandler }) => {
       <div
         className={classes.logo}
         onClick={() => {
-          navigate("/dashboard");
+          navigate("/shiny-lamp/dashboard");
         }}
       >
         {/* <img src="logo.png" alt="LOGO" /> */}
@@ -82,7 +82,7 @@ const TitleBar = ({ isSignedIn, signInHandler }) => {
         <button
           onClick={() => {
             signInHandler(!isSignedIn);
-            if (isSignedIn) navigate("/");
+            if (isSignedIn) navigate("/shiny-lamp/");
           }}
         >
           {isSignedIn ? "Sign out" : "Sign In"}

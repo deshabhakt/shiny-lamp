@@ -18,8 +18,7 @@ import ReceiptIcon from "@mui/icons-material/Receipt";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { routePrefix } from "../../App";
-
+const routePrefix = "/shiny-lamp";
 const useStyles = makeStyles((theme) => ({
   optionList: {
     flex: 1,
